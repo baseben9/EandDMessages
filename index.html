@@ -1,0 +1,47 @@
+<html>
+<body>
+	<u>cool numbers</u>
+	<br>
+	128512 is sanskrit
+	<br>
+	9450 is lines
+	<br>
+	1234567- codes(diacritic combos)
+	<br>
+	890- real nice
+	<br>
+	847,849
+	<br>
+	848 is a stacked one
+	<br>
+	-32 is all caps and removes spaces
+	<br>
+	<u>uncipher</u>
+	<br>
+	To uncipher type negative that number
+	<br>
+	<u>---------------------------------------</u><br>
+	text:<input onchange="encfu()" type=text id="text"><br>
+	magic number:<input type=number onchange="encfu()" id="pass"><br>
+	<div id=out></div>
+<script>
+function encfu() {
+	var t = document.getElementById("text").value
+	var p = document.getElementById("pass").value
+	var sd = t.split("") 
+	var world = ""
+	for (var i = 0, len = sd.length; i < len; i++) {
+	 var world = world + String.fromCharCode(parseInt(sd[i].charCodeAt(0)) + parseInt(p))
+	 document.getElementById("out").innerHTML = "<textarea>" + world
+	}
+	
+
+}
+
+
+</script>
+  
+</script>
+<div id="dispDiv"></div>
+</body>
+</html>
